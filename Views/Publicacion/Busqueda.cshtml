@@ -1,0 +1,102 @@
+﻿@model IEnumerable<Dominio.Post>
+
+@{
+    ViewData["Title"] = "Busqueda";
+}
+
+<h1>Busqueda</h1>
+<form method="post">
+    <input type="text" name="textobuscar" placeholder="Texto" />
+    <input type="number" name="numbuscar" placeholder="Numero" />
+    <input type="submit" value="Buscar" />
+</form>
+
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Muro
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+        <tbody>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>
+                        @if (p.Censurados)
+                        {
+                            <p>Este post ha sido banneado.</p>
+                        }
+                        else
+                        {
+                            <div>
+                                <label>Autor: @p.Autor.Nombre </label><br>
+                                @p.Titulo
+                                @p.Contenido
+                                @if (@p.EsPublico == true)
+                                {
+                                    <p>Publico</p>
+                                }
+                                else
+                                {
+                                    <p>Privado</p>
+                                }
+
+                            </div>
+                            <div>
+                                <img src="/img/@p.Imagen" width="500" /><br />
+                                @Html.ActionLink("Like", "DarLike", "Publicacion", new { idPost = p.Id }, new { @class = "btn btn-primary" })
+                                @Html.ActionLink("Dislike", "DarDislike", "Publicacion", new { idPost = p.Id }, new { @class = "btn btn-danger" })
+                                <span>@TempData[$"MsgReaccionLike_{p.Id}"]</span>
+                                <span>@TempData[$"MsgReaccionDislike_{p.Id}"]</span>
+                                <span>@ViewBag.Msg</span>
+                                <div>
+                                    <span>@TempData["Msg"]</span>
+                                    <span>@TempData["MsgError"]</span>
+                                </div>
+
+                                <span>Likes: @p.CantidadLikes()</span>
+                                <span>Dislikes: @p.CantidadDislikes()</span>
+                                <label>VA: @p.CalcularVA()</label>
+                            </div>
+                            <div>
+                                <div>
+                                    <label>Comentarios:</label>
+                                    @foreach (var c in p.GetComentarios())
+                                    {
+                                        <div class="comentario">
+                                            <div>
+                                                <p>@c.Titulo</p>
+                                                <p>@c.Contenido</p>
+                                            </div>
+                                            <div>
+                                                @Html.ActionLink("Like", "DarLikeComentario", "Publicacion", new { idComentario = c.Id }, new { @class = "btn btn-primary btn-sm" })
+                                                @Html.ActionLink("Dislike", "DarDislikeComentario", "Publicacion", new { idComentario = c.Id }, new { @class = "btn btn-danger btn-sm" })
+                                                <span>Likes: @c.CantidadLikes()</span>
+                                                <span>Dislikes: @c.CantidadDislikes()</span>
+                                                <label>VA: @c.CalcularVA()</label>
+                                                <span>@TempData[$"MsgComentario_{c.Id}"]</span>
+                                            </div>
+
+                                        </div>
+                                    }
+                                    <form asp-action="ComentarPost" asp-controller="Publicacion">
+                                        <input type="hidden" value="@p.Id" name="idPost" />
+                                        <input type="text" name="tituloContenidoNuevo" placeholder="Título minimo 3 caracteres" />
+                                        <input type="text" name="ContenidoNuevo" placeholder="Contenido" />
+                                        <input type="submit" value="Agregar Comentario" />
+                                    </form>
+                                </div>
+                            </div>
+
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

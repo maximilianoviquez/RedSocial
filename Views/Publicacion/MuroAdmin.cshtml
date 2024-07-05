@@ -1,0 +1,71 @@
+﻿@model List<Dominio.Post>
+
+<h1>Posts</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Muro
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>
+                    @if (p.Censurados)
+                    {
+                        <p>Este post ha sido banneado.</p>
+                        @if (p.IdAdministradorQueBaneo == ViewBag.AdministradorLogueadoId)
+                        {
+                            <span>@ViewBag.Msg</span>
+                        }
+                    }
+                    
+                        <div>
+                            <label>Miembro: @p.Autor.Nombre @p.Autor.Apellido</label><br>
+                            @p.Titulo
+                            @p.Contenido
+                        </div>
+                        <br />
+                        <div>
+                            <img src="/img/@p.Imagen" width="500" /><br />
+
+                            <span>Likes: @p.CantidadLikes()</span>
+                            <span>Dislikes: @p.CantidadDislikes()</span>
+                            <label>VA: @p.CalcularVA()</label>
+                        </div>
+                        <div>
+                            <div>
+                                <label>Comentarios:</label>
+                                @foreach (var c in p.GetComentarios())
+                                {
+                                    <div class="comentario">
+                                        <div>
+                                            <p>@c.Titulo</p>
+                                            <p>@c.Contenido</p>
+                                        </div>
+                                        <div>
+                                            <span>Likes: @c.CantidadLikes()</span>
+                                            <span>Dislikes: @c.CantidadDislikes()</span>
+                                            <label>VA: @c.CalcularVA()</label>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div>
+                            <form asp-action="BanearPost" method="post">
+                                <input type="hidden" name="idPost" value="@p.Id" />
+                                <button type="submit">Banear Post</button>
+                            </form>
+                        </div>
+                    
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

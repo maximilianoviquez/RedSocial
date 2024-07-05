@@ -1,0 +1,110 @@
+﻿@model IEnumerable<Dominio.Invitacion>
+
+<h2>Solicitudes de Amistad Pendientes</h2>
+
+
+@if (ViewBag.SuccessMessage != null)
+{
+    <div class="alert alert-success" role="alert">
+        @ViewBag.SuccessMessage
+    </div>
+}
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.ErrorMessage
+    </div>
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+@if (ViewBag.SolicitudesPendientes != null && ViewBag.SolicitudesPendientes.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Solicitante
+                </th>
+                <th>
+                    Estado
+                </th>
+                <th>
+                    Acción
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var solicitud in ViewBag.SolicitudesPendientes)
+            {
+                <tr>
+                    <td>
+                        @solicitud.MiembroSolicitante.Nombre @solicitud.MiembroSolicitante.Apellido
+                    </td>
+                    <td>
+                        @solicitud.Estado
+                    </td>
+                    <td>
+                        <form method="post" action="@Url.Action("AceptarSolicitud", "Usuario", new { idInvitacion = solicitud.Id })">
+                            <button type="submit" class="btn btn-success">Aceptar</button>
+                        </form>
+                        <form method="post" action="@Url.Action("RechazarSolicitud", "Usuario", new { idInvitacion = solicitud.Id })">
+                            <button type="submit" class="btn btn-danger">Rechazar</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hay solicitudes pendientes.</p>
+}
+
+<h2>Enviar Solicitud de Amistad</h2>
+@if (ViewBag.Miembros != null && ViewBag.Miembros.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Acción
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var miembro in ViewBag.Miembros)
+            {
+                <tr>
+                    <td>
+                        @miembro.Nombre @miembro.Apellido
+                    </td>
+                    <td>
+                        <form method="post" action="@Url.Action("EnviarSolicitud", "Usuario", new { idAmigo = miembro.Id })">
+                            <button type="submit" class="btn btn-primary">Enviar Solicitud</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No hay otros miembros disponibles.</p>
+}
+

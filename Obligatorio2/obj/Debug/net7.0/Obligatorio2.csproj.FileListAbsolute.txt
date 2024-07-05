@@ -1,0 +1,36 @@
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/bin/Debug/net7.0/Obligatorio2
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/bin/Debug/net7.0/Obligatorio2.deps.json
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/bin/Debug/net7.0/Obligatorio2.runtimeconfig.json
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/bin/Debug/net7.0/Obligatorio2.dll
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/bin/Debug/net7.0/Obligatorio2.pdb
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/bin/Debug/net7.0/Dominio.dll
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/bin/Debug/net7.0/Dominio.pdb
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.csproj.AssemblyReference.cache
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.AssemblyInfoInputs.cache
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.AssemblyInfo.cs
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.csproj.CoreCompileInputs.cache
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.csproj.CopyComplete
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.dll
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/refint/Obligatorio2.dll
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.pdb
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.genruntimeconfig.cache
+/Users/maximiliano/Desktop/Obligatorio P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/ref/Obligatorio2.dll
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/bin/Debug/net7.0/Obligatorio2
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/bin/Debug/net7.0/Obligatorio2.deps.json
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/bin/Debug/net7.0/Obligatorio2.runtimeconfig.json
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/bin/Debug/net7.0/Obligatorio2.dll
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/bin/Debug/net7.0/Obligatorio2.pdb
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/bin/Debug/net7.0/Dominio.dll
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/bin/Debug/net7.0/Dominio.pdb
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.csproj.AssemblyReference.cache
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.GeneratedMSBuildEditorConfig.editorconfig
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.AssemblyInfoInputs.cache
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.AssemblyInfo.cs
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.csproj.CoreCompileInputs.cache
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.csproj.CopyComplete
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.dll
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/refint/Obligatorio2.dll
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.pdb
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/Obligatorio2.genruntimeconfig.cache
+/Users/maximiliano/Desktop/Obligatorio2-P2/SocialNetwork/Obligatorio2/obj/Debug/net7.0/ref/Obligatorio2.dll

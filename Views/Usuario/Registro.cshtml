@@ -1,0 +1,53 @@
+﻿@model Dominio.Miembro
+<h1>Registro</h1>
+<h4>ingresa tus datos</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form id="formularioRegistro" method="post">
+            <div class="form-group">
+                <label class="control-label">Nombre</label>
+                <input asp-for="Nombre" id="nombre" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label class="control-label">Apellido</label>
+                <input asp-for="Apellido" id="apellido" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label class="control-label">Fecha de Nacimiento</label>
+                <input type="date" asp-for="FechaNac" id="fechanac" class="form-control" />
+
+            </div>
+
+            <div class="form-group">
+                <label class="control-label">Email</label>
+                <input asp-for="Email" id="email" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label class="control-label">Contraseña</label>
+                <input asp-for="Password" id="pass" class="form-control" />
+
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Registrarse" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<p id="pRes">@ViewBag.msg</p>
+
+
+@section Scripts{
+
+    <script scr="/js/Persona/RegistroSocio.js"></script>
+}
+
+
+
+
+
