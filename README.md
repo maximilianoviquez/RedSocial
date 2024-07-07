@@ -9,7 +9,7 @@ Esta es una aplicacion de red social creada con C# .net core MVC.
 
 
 ## Ver ejemplo en vivo
-- [https://maximilianoviquez.github.io/Pagina-Audiolibros/](https://maximilianoviquez.github.io/Pagina-Audiolibros/)
+- []()
 
 )
 ## Instalacion
